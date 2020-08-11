@@ -10,7 +10,7 @@ with open(filename) as f:
     # Print out the header index
     for index, column_header in enumerate(header_row):
         print(index, column_header)
-    
+
     dates, highs, lows = [], [], []
 
     for row in reader:
@@ -29,7 +29,7 @@ with open(filename) as f:
 plt.style.use('seaborn')
 fig, ax = plt.subplots()
 ax.plot(dates, highs, c='red', alpha=0.5)
-ax.plot(dates, lows, c='blue', alpha=0.5)
+ax.plot(dates, lows, c='green', alpha=0.5)
 
 # Format plot.
 plt.fill_between(dates, highs, lows, facecolor='blue', alpha=0.1)
